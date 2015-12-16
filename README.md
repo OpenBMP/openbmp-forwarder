@@ -43,7 +43,7 @@ You can either run the code within the **git** directory or you can install it i
 ### Install:
 
     git clone https://github.com/OpenBMP/openbmp-forwarder.git
-    cd openbmp-file-consumer
+    cd openbmp-forwarder
     sudo python setup.py install
 
 
