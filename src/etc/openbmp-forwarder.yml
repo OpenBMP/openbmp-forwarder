@@ -1,0 +1,70 @@
+# -------------------------------------------------------------------------
+# OpenBMP forwarder consumer configuration
+# -------------------------------------------------------------------------
+
+# Max size of messages in queue to be forwarded/written
+max_queue_size: 1000
+
+#
+# Local Kafka settings - BMP raw messages are read from this instance
+#
+kafka:
+  servers             : ['localhost:9092']
+  client_id           : 'openbmp-forwarder'
+  group_id            : 'openbmp-forwarder'
+  offset_reset_largest: False
+
+#
+# Collector - Where to send the BMP forwarded messages
+#
+collector:
+  host: 192.133.197.23
+  port: 5000
+
+#
+# Log settings
+#
+logging:
+  version: 1
+  disable_existing_loggers: True
+
+  formatters:
+    default:
+      format: '%(asctime)s | %(levelname)-8s | %(name)s | %(message)s'
+
+  handlers:
+    console:
+      class: logging.StreamHandler
+      level: DEBUG
+      formatter: default
+      stream: ext://sys.stdout
+
+    file:
+      class: logging.handlers.RotatingFileHandler
+      level: DEBUG
+      formatter: default
+      maxBytes: 20971520
+      backupCount: 10
+      encoding: utf8
+      filename: openbmp-forwarder.log
+
+  loggers:
+    # BMP Consuemr log messages
+    bmp_consumer:
+      level: INFO
+      handlers: [file]
+      propagate: no
+
+    # BMP Writer log messages
+    bmp_writer:
+      level: INFO
+      handlers: [file]
+      propagate: no
+
+
+    # General/main program messages
+    root:
+      level: INFO
+      handlers: [file]
+
+
