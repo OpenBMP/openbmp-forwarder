@@ -10,6 +10,6 @@ setup(name='openbmp-forwarder',
       url='',
       data_files=[('etc', ['src/etc/openbmp-forwarder.yml'])],
       package_dir={'': 'src/site-packages'},
-      packages=['openbmp', 'openbmp.parsed'],
+      packages=['openbmp'],
       scripts=['src/bin/openbmp-forwarder']
      )
