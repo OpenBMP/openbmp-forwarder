@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-from distutils.core import setup
+from setuptools import setup
 
 setup(name='openbmp-forwarder',
       version='0.1.0',
@@ -10,6 +10,6 @@ setup(name='openbmp-forwarder',
       url='',
       data_files=[('etc', ['src/etc/openbmp-forwarder.yml'])],
       package_dir={'': 'src/site-packages'},
-      packages=['openbmp'],
+      packages=['openbmp', 'openbmp.forwarder'],
       scripts=['src/bin/openbmp-forwarder']
      )
