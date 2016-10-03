@@ -18,7 +18,7 @@ kafka:
 # Collector - Where to send the BMP forwarded messages
 #
 collector:
-  host: localhost
+  host: 10.1.1.1
   port: 5000
 
 #
