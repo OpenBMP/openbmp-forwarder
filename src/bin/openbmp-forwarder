@@ -17,9 +17,9 @@ import time
 import signal
 
 from multiprocessing import Queue, Manager
-from openbmp.logger import LoggerThread
-from openbmp.bmp_consumer import BMPConsumer
-from openbmp.forwarder_bmp import BMPWriter
+from openbmp.forwarder.logger import LoggerThread
+from openbmp.forwarder.bmp_consumer import BMPConsumer
+from openbmp.forwarder.forwarder_bmp import BMPWriter
 
 # Root logger
 LOG = None

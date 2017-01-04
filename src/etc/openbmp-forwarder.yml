@@ -9,7 +9,7 @@ max_queue_size: 1000
 # Local Kafka settings - BMP raw messages are read from this instance
 #
 kafka:
-  servers             : ['localhost:9092']
+  servers             : ['kafka-int.openbmp.org:9092']
   client_id           : 'openbmp-forwarder'
   group_id            : 'openbmp-forwarder'
   offset_reset_largest: False
@@ -18,7 +18,7 @@ kafka:
 # Collector - Where to send the BMP forwarded messages
 #
 collector:
-  host: 10.1.1.1
+  host: 127.0.0.1
   port: 5000
 
 #

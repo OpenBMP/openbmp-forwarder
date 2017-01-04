@@ -1,3 +1,6 @@
 .idea
 .DS_Store
 **/*.pyc
+build/
+openbmp-forwarder.log
+src/bin/openbmp-forwarder.log

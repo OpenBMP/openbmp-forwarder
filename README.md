@@ -36,7 +36,12 @@ You can either run the code within the **git** directory or you can install it i
     sudo pip install python-snappy
     sudo pip install kafka-python
     sudo pip install pyyaml
+    
+    git clone https://github.com/OpenBMP/openbmp-python-api-message.git
+    cd openbmp-python-api-message
+    sudo python setup.py install
 
+Installation of openbmp-python-api-message library is shown above.
 
 *See [Kafka-python Install Instructions](http://kafka-python.readthedocs.org/en/latest/install.html) for more details.*
 
